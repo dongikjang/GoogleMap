@@ -1,13 +1,16 @@
 GoogleMap
 ========
 Modified R functions in package `ggmap` for using watercolor of Stamen. 
-I have modified function `get_stamenmap` in package `ggmap`.
+I have modified function `get_stamenmap` in the package `ggmap`.
 Since original function would download `png` tiles  at Stamen webpage,
 R shows error message such as 
 ```coffee
 Error in readPNG("ggmapFileDrawer/ggmapTemp.png") : 
   file is not in PNG format
 ```
+Actual reason of this error is that Stamen with watercolor type 
+does not use `png` but `jpg` format.  Therefore I have changed two points.
+One is destination file format (`png' -> `jpg`) and the other is load function of image (`readPNG` -> `readJPG`).
 ### Load the source code
 
 ```coffee
