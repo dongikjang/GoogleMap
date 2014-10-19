@@ -26,14 +26,11 @@ library(plyr)
 qmap("seoul", zoom = 11, maptype = 'hybrid')
 
 # Openstreet Map
-#cairo_pdf("ggmap2.pdf", width=6, height=6)
 qmap("seoul", zoom = 11, source = 'osm')
 
 # Stamen with Toner type
-#cairo_pdf("ggmap3.pdf", width=6, height=6)
 qmap("seoul", zoom = 11, maptype = 'toner', source = 'stamen')
 
 # Stamen with watercolor type
-#cairo_pdf("ggmap4.pdf", width=6, height=6)
 qmap("seoul", zoom = 11, maptype = 'watercolor', source = 'stamen')
 ```
