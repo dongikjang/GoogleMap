@@ -10,7 +10,7 @@ Error in readPNG("ggmapFileDrawer/ggmapTemp.png") :
 ```
 Actual reason of this error is that Stamen with watercolor type 
 does not use `png` but `jpg` format.  Therefore I have changed two points.
-One is destination file format (`png' -> `jpg`) and the other is load function of image (`readPNG` -> `readJPG`).
+One is destination file format (`png` -> `jpg`) and the other is load function of image (`readPNG` -> `readJPG`).
 ### Load the source code
 
 ```coffee
